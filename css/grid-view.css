@@ -1,0 +1,180 @@
+/****************/
+/*COLOR PALETTE*/
+/****************/
+/*
+colors: rgb(208, 230, 251)
+
+
+- Font size system (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing stystem (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+header {
+  margin-bottom: 2.4rem;
+}
+
+.title {
+  background-color: #374c91;
+  font-size: 1.6rem;
+  font-family: "Lobster";
+  font-weight: 500;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 12%;
+}
+
+.head-link:link,
+.head-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  margin: 0 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+
+.card {
+  padding: 1.2rem;
+  background-color: #2957ec;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  border-radius: 0.8rem;
+  transition: 0.3s;
+
+  position: relative;
+}
+
+.card:hover {
+  background-color: #2957eca4;
+  z-index: 5;
+  box-shadow: 1rem 0.8rem 1.8rem 0.3rem #00000048;
+  transform: translateY(-0.3rem);
+}
+
+.card:hover .link {
+  background-color: #2957eca4;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.card:hover .number-id {
+  display: block;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+
+  background-image: url("../img/contacts-imgs/jim.jpg");
+  background-size: cover;
+}
+
+.number-id {
+  font-size: 4.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Lobster";
+  color: #fff;
+  position: absolute;
+  top: 31px;
+  left: 45px;
+
+  display: none;
+}
+
+.full-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.surname {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.jim {
+  background-image: url("../img/contacts-imgs/jim.jpg");
+  background-size: cover;
+}
+
+.pam {
+  background-image: url("../img/contacts-imgs/pam.jpg");
+  background-size: cover;
+}
+
+.dwight {
+  background-image: url("../img/contacts-imgs/dwight.jpg");
+  background-size: cover;
+}
+
+.michael {
+  background-image: url("../img/contacts-imgs/michael.jpg");
+  background-size: cover;
+}
+
+.creed {
+  background-image: url("../img/contacts-imgs/creed.jpg");
+  background-size: cover;
+}
+
+.andy {
+  background-image: url("../img/contacts-imgs/andy.jpg");
+  background-size: cover;
+}
+
+.stanley {
+  background-image: url("../img/contacts-imgs/stanleyy.jpg");
+  background-size: cover;
+}
+
+.kevin {
+  background-image: url("../img/contacts-imgs/kevin.jpg");
+  background-size: cover;
+}
+
+.oscar {
+  background-image: url("../img/contacts-imgs/oscar.jpg");
+  background-size: cover;
+}

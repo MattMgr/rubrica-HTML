@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+header {
+  margin-bottom: 2.4rem;
+}
+
+.title {
+  background-color: #374c91;
+  font-size: 1.6rem;
+  font-family: "Lobster";
+  font-weight: 500;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 12%;
+}
+
+.head-link:link,
+.head-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  background-color: #374c91;
+  color: #fff;
+  max-width: 70rem;
+  min-width: 50rem;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+}
+
+img {
+  width: 20rem;
+  height: 25rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 1.2rem;
+}
+
+.name {
+  font-family: "Lobster";
+  font-size: 2.4rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.8rem;
+  grid-column: 1 / -1;
+}
+
+.contacts-hobbies {
+  display: flex;
+  gap: 2.4rem;
+  grid-column: 1 / -1;
+}
+
+.contacts,
+.hobbies {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: "Lobster";
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 200;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #d0e6fb86;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+}
+
+.contact-link:link,
+.contact-link:visited {
+  color: #fff;
+}
+
+.email {
+  margin-left: 2rem;
+}
+
+.tel {
+  margin-left: 3.2rem;
+}
+
+.website {
+  margin-left: 1rem;
+}
+
+.hobbie-icon {
+  font-size: 1.6rem;
+}
+
+.hobbie {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.bio-container {
+  grid-column: 1 / -1;
+  color: #374c91;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #000;
+}
+
+p {
+  font-style: italic;
+}
+
+p:nth-child(2) {
+  margin-bottom: 1.2rem;
+}

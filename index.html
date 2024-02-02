@@ -3,78 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <title>Rubrica</title>
-    <style>
-      table td,
-      table th {
-        padding: 10px;
-        /*border: 1px solid #757474;
-        text-align: center;*/
-      }
-    </style>
   </head>
   <body>
-    <table style="border-collapse: collapse">
-      <caption>
-        <strong>Lista Contatti</strong>
-      </caption>
-      <colgroup>
-        <col style="background-color: #bebcbcb4" />
-        <col style="background-color: #369ef386" />
-        <col style="background-color: #369ef386" />
-      </colgroup>
-      <thead>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Cognome</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><a href="./contatti/jim.html">Jim</a></td>
-          <td>Halpert</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><a href="./contatti/pam.html">Pam</a></td>
-          <td>Beesly</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><a href="./contatti/dwight.html">Dwight</a></td>
-          <td>Schrute</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><a href="./contatti/michael.html">Michael</a></td>
-          <td>Scott</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><a href="./contatti/creed.html">Creed</a></td>
-          <td>Bratton</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td><a href="./contatti/andy.html">Andy</a></td>
-          <td>Bernard</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td><a href="/contatti/stanley.html">Stanley</a></td>
-          <td>Hudson</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td><a href="/contatti/kevin.html">Kevin</a></td>
-          <td>Malone</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td><a href="/contatti/oscar.html">Oscar</a></td>
-          <td>Martinez</td>
-        </tr>
-      </tbody>
-    </table>
+    <header>
+      <div class="title">
+        <a href="grid-view.html"
+          ><ion-icon class="icon" name="call-outline"></ion-icon
+        ></a>
+        <a class="head-link" href="index.html">Rubrica CSS</a>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row--head">
+          <div class="cell-id"><span class="id">ID</span></div>
+          <div class="cell">Nome</div>
+          <div class="cell">Cognome</div>
+        </div>
+
+        <a class="link" href="/contacts/1-jim.html">
+          <div class="row odd">
+            <div class="cell-id highlight"><span>1</span></div>
+            <div class="cell long-text">Jim</div>
+            <div class="cell long-text">Halpert</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/2-pam.html">
+          <div class="row">
+            <div class="cell-id highlight"><span>2</span></div>
+            <div class="cell long-text">Pam</div>
+            <div class="cell long-text">Beesly</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/3-dwight.html">
+          <div class="row odd">
+            <div class="cell-id highlight"><span>3</span></div>
+            <div class="cell long-text">Dwight</div>
+            <div class="cell long-text">Shrute</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/4-michael.html">
+          <div class="row">
+            <div class="cell-id highlight"><span>4</span></div>
+            <div class="cell long-text">Michael</div>
+            <div class="cell long-text">Scott</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/5-creed.html">
+          <div class="row odd">
+            <div class="cell-id highlight"><span>5</span></div>
+            <div class="cell long-text">Creed</div>
+            <div class="cell long-text">Bratton</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/6-andy.html">
+          <div class="row">
+            <div class="cell-id highlight"><span>6</span></div>
+            <div class="cell long-text">Andy</div>
+            <div class="cell long-text">Bernard</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/7-stanley.html">
+          <div class="row odd">
+            <div class="cell-id highlight"><span>7</span></div>
+            <div class="cell long-text">Stanley</div>
+            <div class="cell long-text">Hudson</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/8-kevin.html">
+          <div class="row">
+            <div class="cell-id highlight"><span>8</span></div>
+            <div class="cell long-text">Kevin</div>
+            <div class="cell long-text">Malone</div>
+          </div>
+        </a>
+
+        <a class="link" href="/contacts/9-oscar.html">
+          <div class="row odd">
+            <div class="cell-id highlight"><span>9</span></div>
+            <div class="cell long-text">Oscar</div>
+            <div class="cell long-text">Martinez</div>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
