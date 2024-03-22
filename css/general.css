@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+header {
+  margin-bottom: 2.4rem;
+}
+
+.title {
+  background-color: #374c91;
+  font-size: 1.6rem;
+  font-family: "Lobster";
+  font-weight: 500;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 12%;
+}
+
+.head-link:link,
+.head-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
