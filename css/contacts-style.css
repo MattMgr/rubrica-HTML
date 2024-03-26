@@ -4,8 +4,7 @@ article {
   display: flex;
   background-color: #374c91;
   color: #fff;
-  max-width: 70rem;
-  min-width: 50rem;
+  max-width: 65rem;
   padding: 1.6rem;
   border-radius: 0.8rem;
 }
@@ -16,8 +15,6 @@ img {
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   margin-left: 1.2rem;
 }
 
@@ -26,7 +23,7 @@ img {
   font-size: 2.4rem;
   font-weight: 200;
   letter-spacing: 0.1rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.4rem;
   grid-column: 1 / -1;
 }
 
@@ -44,6 +41,7 @@ img {
 
 .heading {
   font-family: "Lobster";
+  margin-top: 0;
   margin-bottom: 1.2rem;
   letter-spacing: 0.1rem;
   font-weight: 200;
@@ -55,6 +53,7 @@ img {
   background-color: #d0e6fb86;
   padding: 0.8rem;
   border-radius: 0.3rem;
+  margin: 0rem;
 }
 
 .contact-link:link,
@@ -81,6 +80,7 @@ img {
 .hobbie {
   display: flex;
   justify-content: flex-start;
+  margin: 0;
   gap: 1.2rem;
 }
 
@@ -107,4 +107,12 @@ p {
 
 p:nth-child(2) {
   margin-bottom: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.2rem;
+  }
 }
