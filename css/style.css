@@ -56,6 +56,8 @@ span {
 .cell {
   margin: 1.4rem 0;
   margin-right: 7rem;
+  min-height: 1.5rem;
+  max-height: fit-content;
 }
 
 .cell.long-text {
