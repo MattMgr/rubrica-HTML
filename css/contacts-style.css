@@ -1,16 +1,17 @@
 @import "general.css";
+@import "/css/--variables.css";
 
 article {
   display: flex;
-  background-color: #374c91;
-  color: #fff;
+  background-color: var(--primary-blue);
+  color: var(--white);
   max-width: 65rem;
   padding: 1.6rem;
   border-radius: 0.8rem;
 }
 
 img {
-  width: 20rem;
+  width: 18rem;
   height: 25rem;
 }
 
@@ -50,7 +51,7 @@ img {
 .contact {
   display: flex;
   justify-content: flex-start;
-  background-color: #d0e6fb86;
+  background-color: var(--light-blue);
   padding: 0.8rem;
   border-radius: 0.3rem;
   margin: 0rem;
@@ -58,7 +59,7 @@ img {
 
 .contact-link:link,
 .contact-link:visited {
-  color: #fff;
+  color: var(--white);
 }
 
 .email {
@@ -94,11 +95,11 @@ img {
 
 .bio-container {
   grid-column: 1 / -1;
-  color: #374c91;
-  background-color: #fff;
+  color: var(--primary-blue);
+  background-color: var(--white);
   padding: 1.2rem;
   border-radius: 0.3rem;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid var(--black);
 }
 
 p {
@@ -110,9 +111,22 @@ p:nth-child(2) {
 }
 
 @media (max-width: 1000px) {
-  .contact-info {
+  .contacts-hobbies {
     display: flex;
     flex-direction: column;
-    margin-left: 1.2rem;
+    gap: 2.4rem;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 650px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 17.5rem;
   }
 }

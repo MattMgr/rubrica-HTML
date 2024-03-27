@@ -1,7 +1,8 @@
 @import "general.css";
+@import "/css/--variables.css";
 
 .container {
-  border: 2px solid #d0e6fb;
+  border: 2px solid var(--light-blue);
   border-radius: 0.8rem;
   overflow: hidden;
 }
@@ -20,7 +21,7 @@
 .link:link,
 .link:visited {
   text-decoration: none;
-  color: #111;
+  color: var(--black);
 }
 
 .row {
@@ -29,12 +30,12 @@
 }
 
 .row:hover {
-  background-color: yellow;
+  background-color: var(--yellow);
   padding: 0.2rem 0;
 }
 
 .odd {
-  background-color: rgb(208, 230, 251);
+  background-color: var(--light-blue);
 }
 
 .cell-id {
@@ -43,11 +44,11 @@
 }
 
 .id {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 span {
-  background-color: yellow;
+  background-color: var(--yellow);
   padding: 0.2rem 0.4rem;
   border-radius: 50%;
 }

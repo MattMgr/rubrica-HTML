@@ -1,4 +1,5 @@
 @import "general.css";
+@import "/css/--variables.css";
 
 .container {
   margin: 0 2.4rem;
@@ -9,7 +10,7 @@
 
 .card {
   padding: 0.8rem;
-  background-color: #374c91;
+  background-color: var(--primary-blue);
   display: flex;
   align-items: center;
   gap: 2.4rem;
@@ -20,14 +21,14 @@
 }
 
 .card:hover {
-  background-color: #374c91a4;
+  background-color: var(--primary-blue-tint);
   z-index: 5;
-  box-shadow: 1rem 0.8rem 1.8rem 0.3rem #00000048;
+  box-shadow: 1rem 0.8rem 1.8rem 0.3rem var(--black-shadow);
   transform: translateY(-0.3rem);
 }
 
 .card:hover .link {
-  background-color: #374c91a4;
+  background-color: var(--primary-blue-tint);
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
@@ -45,7 +46,7 @@
   height: 7rem;
   border-radius: 50%;
 
-  background-image: url("../img/contacts-imgs/jim.jpg");
+  background-image: url("../img/contacts/jim.jpg");
   background-size: cover;
 }
 
@@ -54,7 +55,7 @@
   font-weight: 700;
   text-decoration: none;
   font-family: "Lobster";
-  color: #fff;
+  color: var(--white);
   position: absolute;
   top: 35px;
   left: 53px;
@@ -68,7 +69,7 @@
   gap: 0.8rem;
 
   font-size: 2rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .surname {
@@ -77,47 +78,47 @@
 }
 
 .jim {
-  background-image: url("../img/contacts-imgs/jim.jpg");
+  background-image: url("../img/contacts/jim.jpg");
   background-size: cover;
 }
 
 .pam {
-  background-image: url("../img/contacts-imgs/pam.jpg");
+  background-image: url("../img/contacts/pam.jpg");
   background-size: cover;
 }
 
 .dwight {
-  background-image: url("../img/contacts-imgs/dwight.jpg");
+  background-image: url("../img/contacts/dwight.jpg");
   background-size: cover;
 }
 
 .michael {
-  background-image: url("../img/contacts-imgs/michael.jpg");
+  background-image: url("../img/contacts/michael.jpg");
   background-size: cover;
 }
 
 .creed {
-  background-image: url("../img/contacts-imgs/creed.jpg");
+  background-image: url("../img/contacts/creed.jpg");
   background-size: cover;
 }
 
 .andy {
-  background-image: url("../img/contacts-imgs/andy.jpg");
+  background-image: url("../img/contacts/andy.jpg");
   background-size: cover;
 }
 
 .stanley {
-  background-image: url("../img/contacts-imgs/stanleyy.jpg");
+  background-image: url("../img/contacts/stanleyy.jpg");
   background-size: cover;
 }
 
 .kevin {
-  background-image: url("../img/contacts-imgs/kevin.jpg");
+  background-image: url("../img/contacts/kevin.jpg");
   background-size: cover;
 }
 
 .oscar {
-  background-image: url("../img/contacts-imgs/oscar.jpg");
+  background-image: url("../img/contacts/oscar.jpg");
   background-size: cover;
 }
 
