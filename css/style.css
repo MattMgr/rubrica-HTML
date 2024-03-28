@@ -2,7 +2,7 @@
 @import "/css/--variables.css";
 
 .container {
-  border: 2px solid var(--light-blue);
+  border: 3px solid var(--light-blue);
   border-radius: 0.8rem;
   overflow: hidden;
 }
@@ -14,7 +14,7 @@
 }
 
 .row--head {
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 
@@ -25,13 +25,13 @@
 }
 
 .row {
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: all 0.3s;
 }
 
 .row:hover {
   background-color: var(--yellow);
-  padding: 0.2rem 0;
+  padding: 0.3rem 0;
 }
 
 .odd {
@@ -39,7 +39,7 @@
 }
 
 .cell-id {
-  margin: 1.1rem 1.2rem;
+  margin: 1.2rem 1.6rem;
   font-weight: 700;
 }
 
@@ -49,19 +49,19 @@
 
 span {
   background-color: var(--yellow);
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 50%;
 }
 
 .cell {
-  margin: 1rem 0;
-  margin-right: 3rem;
-  min-height: 1rem;
+  margin: 1.2rem 0;
+  margin-right: 4rem;
+  min-height: 1.4rem;
   max-height: fit-content;
 }
 
 .cell.long-text {
-  max-width: 6rem;
+  max-width: 7rem;
   overflow: hidden;
 }
 

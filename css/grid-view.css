@@ -9,7 +9,7 @@
 }
 
 .card {
-  padding: 0.8rem;
+  padding: 1rem;
   background-color: var(--primary-blue);
   display: flex;
   align-items: center;
@@ -29,8 +29,8 @@
 
 .card:hover .link {
   background-color: var(--primary-blue-tint);
-  width: 7rem;
-  height: 7rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
 }
 
@@ -42,8 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 7rem;
-  height: 7rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
 
   background-image: url("../img/contacts/jim.jpg");
@@ -57,8 +57,8 @@
   font-family: "Lobster";
   color: var(--white);
   position: absolute;
-  top: 35px;
-  left: 53px;
+  top: 30px;
+  left: 40px;
 
   display: none;
 }
@@ -68,7 +68,7 @@
   flex-direction: column;
   gap: 0.8rem;
 
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--white);
 }
 
@@ -122,7 +122,7 @@
   background-size: cover;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .container {
     margin: 0 2.4rem;
     display: grid;
@@ -131,7 +131,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 600px) {
   .container {
     margin: 0 2.4rem;
     display: grid;
