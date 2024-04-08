@@ -1,6 +1,31 @@
 @import "/css/--variables.css";
 @import "/html/index.html";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6 {
+  font-family: "Lobster";
+  font-weight: 500;
+  margin: 0.8rem 0rem;
+}
+
+p {
+  margin: 1rem 0rem;
+}
+
+li {
+  margin: 0.8rem 2rem;
+  list-style: disc;
+}
+
+blockquote {
+  color: var(--dark-grey);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -88,7 +113,7 @@ main {
   height: 3rem;
   display: block;
   background-color: var(--dark-grey);
-  border-radius: 20px;
+  border-radius: 2rem;
   position: relative;
   transition: all 0.3s;
 }
@@ -115,33 +140,8 @@ main {
 }
 
 .changeTheme:has(input:checked)::before {
-  left: 60%;
+  left: 58%;
 }
 
 body:has(input:checked) {
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h5,
-h6 {
-  font-family: "Lobster";
-  font-weight: 500;
-  margin: 0.8rem 0rem;
-}
-
-p {
-  margin: 1rem 0rem;
-}
-
-li {
-  margin: 0.8rem 2rem;
-  list-style: disc;
-}
-
-blockquote {
-  color: var(--dark-grey);
 }
