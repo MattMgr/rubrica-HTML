@@ -3,8 +3,8 @@
 
 article {
   display: flex;
-  background-color: var(--primary-blue);
-  color: var(--white);
+  background-color: var(--primary-color);
+  color: var(--title-color);
   max-width: 70rem;
   padding: 1.6rem;
   border-radius: 0.8rem;
@@ -51,7 +51,7 @@ img {
 .contact {
   display: flex;
   justify-content: flex-start;
-  background-color: var(--light-blue);
+  background-color: var(--primary-color-light);
   padding: 0.8rem;
   border-radius: 0.3rem;
   margin: 0rem;
@@ -59,7 +59,7 @@ img {
 
 .contact-link:link,
 .contact-link:visited {
-  color: var(--white);
+  color: var(--title-color);
 }
 
 .email {
@@ -96,11 +96,11 @@ img {
 .bio-container {
   font-size: 1.4rem;
   grid-column: 1 / -1;
-  color: var(--primary-blue);
-  background-color: var(--white);
+  color: var(--primary-color);
+  background-color: var(--title-color);
   padding: 1.2rem;
   border-radius: 0.3rem;
-  border: 0.1rem solid var(--black);
+  border: 0.1rem solid var(--text-color);
 }
 
 p {
