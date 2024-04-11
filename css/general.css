@@ -14,6 +14,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-size: 10px;
 }
 
 /* Sections
@@ -376,10 +377,6 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
 }
 
 body {
