@@ -1,4 +1,6 @@
 :root {
+  /**** COLORS ****/
+
   --title-color: #fff;
   --primary-color: #374c91;
   --primary-color-tint: #374c91a4;
@@ -8,6 +10,11 @@
   --text-color: #000;
   --shadow-color: #00000048;
   --transparent: #cbcbcbb7;
+
+  /**** FONT FAMILY ****/
+
+  --roboto: "Roboto", sans-serif;
+  --lobster: "Lobster";
 }
 
 @media (prefers-color-scheme: dark) {

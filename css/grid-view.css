@@ -54,7 +54,7 @@
   font-size: 4.4rem;
   font-weight: 700;
   text-decoration: none;
-  font-family: "Lobster";
+  font-family: var(--lobster);
   color: var(--title-color);
   position: absolute;
   top: 30px;
