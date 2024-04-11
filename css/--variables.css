@@ -5,7 +5,7 @@
   --primary-color-tint: #374c91a4;
   --checked-toggle-color: #4cb774;
   --primary-color-light: #d0e6fb86;
-  --dark-grey: #cbcbcbb7;
+  --transparent: #cbcbcbb7;
   --shadow-color: #00000048;
   --text-color: #000;
 }
@@ -18,7 +18,7 @@
     --primary-color-tint: #494949a4;
     --checked-toggle-color: #3fbb6d;
     --primary-color-light: #44260986;
-    --dark-grey: #343434b7;
+    --transparent: #343434a0;
     --shadow-color: #00000048;
     --text-color: #30221e;
   }
