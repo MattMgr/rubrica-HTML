@@ -51,7 +51,7 @@
 }
 
 .number-id {
-  font-size: 4.4rem;
+  font-size: 5rem;
   font-weight: 700;
   text-decoration: none;
   font-family: var(--lobster);
@@ -66,7 +66,7 @@
 .full-name {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
 
   font-size: 2.5rem;
   color: var(--title-color);

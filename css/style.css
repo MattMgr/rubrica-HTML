@@ -14,7 +14,7 @@
 }
 
 .row--head {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
@@ -25,7 +25,6 @@
 }
 
 .row {
-  font-size: 1.5rem;
   transition: all 0.3s;
 }
 
