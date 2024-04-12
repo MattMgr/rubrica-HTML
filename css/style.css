@@ -14,7 +14,7 @@
 }
 
 .row--head {
-  font-size: 1.8rem;
+  font-size: var(--big);
   font-weight: 700;
 }
 

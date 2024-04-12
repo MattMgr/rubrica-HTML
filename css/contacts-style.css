@@ -100,7 +100,7 @@ img {
 
 p {
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: var(--small);
 }
 
 p:nth-child(2) {

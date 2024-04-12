@@ -1,6 +1,5 @@
 :root {
   /**** COLORS ****/
-
   --title-color: #fff;
   --primary-color: #374c91;
   --primary-color-tint: #374c91a4;
@@ -12,9 +11,13 @@
   --transparent: #cbcbcbb7;
 
   /**** FONT FAMILY ****/
-
   --roboto: "Roboto", sans-serif;
   --lobster: "Lobster";
+
+  /**** FONT SIZE ****/
+  --big: 1.8rem;
+  --medium: 1.6rem;
+  --small: 1.4rem;
 }
 
 @media (prefers-color-scheme: dark) {

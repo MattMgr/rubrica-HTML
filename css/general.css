@@ -410,7 +410,7 @@ header {
   color: var(--title-color);
   border: 1px solid var(--title-color);
   border-radius: 12%;
-  font-size: 1.8rem;
+  font-size: var(--big);
 }
 
 .head-link:link,
@@ -427,12 +427,12 @@ header {
 
 .menu-item {
   list-style: none;
-  font-size: 1.8rem;
+  font-size: var(--big);
 }
 
 .menu-icon {
   color: var(--title-color);
-  font-size: 1.8rem;
+  font-size: var(--big);
   margin-right: 0.5rem;
 }
 
@@ -494,9 +494,15 @@ body:has(input:checked) {
   .header {
     display: flex;
     flex-direction: column;
+    min-width: 30rem;
+  }
+
+  .title {
+    margin-inline: auto;
   }
 
   .menu {
     display: flex;
+    margin-inline: auto;
   }
 }
