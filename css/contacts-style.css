@@ -5,10 +5,11 @@ article {
   display: grid;
   grid-template-columns: 0.5fr 1.5fr;
   background-color: var(--primary-color);
-  color: var(--title-color);
-  max-width: 70rem;
-  padding: 1.6rem;
-  border-radius: 0.8rem;
+  color: var(--primary-text-color);
+  width: 800px;
+  padding: var(--space-s);
+  border-radius: var(--space-s);
+  margin: var(--space-m);
 }
 
 img {
@@ -17,20 +18,19 @@ img {
 }
 
 .contact-info {
-  margin-left: 1.2rem;
+  margin-left: var(--space-s);
 }
 
 .name {
   font-family: var(--lobster);
   font-weight: 200;
-  letter-spacing: 0.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-s);
   grid-column: 1 / -1;
 }
 
 .contacts-hobbies {
   display: flex;
-  gap: 2.4rem;
+  gap: var(--space-m);
   grid-column: 1 / -1;
 }
 
@@ -42,9 +42,8 @@ img {
 
 .heading {
   font-family: var(--lobster);
-  margin-top: 0;
-  margin-bottom: 0.2rem;
-  letter-spacing: 0.1rem;
+  margin-top: var(--space-none);
+  margin-bottom: calc(var(--space-xs) * 0.1);
   font-weight: 200;
 }
 
@@ -52,47 +51,47 @@ img {
   display: flex;
   justify-content: flex-start;
   background-color: var(--primary-color-light);
-  padding: 0.8rem;
-  border-radius: 0.3rem;
-  margin: 0rem;
+  padding: var(--space-xs);
+  border-radius: var(--space-2xs);
+  margin: var(--space-none);
 }
 
 .contact-link:link,
 .contact-link:visited {
-  color: var(--title-color);
+  color: var(--primary-text-color);
 }
 
 .email {
-  margin-left: 3rem;
+  margin-left: var(--space-l);
 }
 
 .tel {
-  margin-left: 5rem;
+  margin-left: var(--space-2xl);
 }
 
 .website {
-  margin-left: 1.5rem;
+  margin-left: var(--space-s);
 }
 
 .hobbie {
   display: flex;
   justify-content: flex-start;
-  margin: 0;
-  gap: 1.2rem;
+  margin: var(--space-none);
+  gap: var(--space-s);
 }
 
 .list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 1.8rem;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-s);
 }
 
 .bio-container {
   grid-column: 1 / -1;
   color: var(--primary-color);
-  background-color: var(--title-color);
+  background-color: var(--bg-color);
   padding: 1.2rem;
   border-radius: 0.3rem;
   border: 0.1rem solid var(--text-color);
@@ -100,24 +99,24 @@ img {
 
 p {
   font-style: italic;
-  font-size: var(--small);
+  font-size: var(--font-size-0);
 }
 
 p:nth-child(2) {
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--space-xs);
 }
 
 @media (max-width: 700px) {
   .contacts-hobbies {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--space-xs);
     grid-column: 1 / -1;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-s);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   article {
     display: flex;
     flex-direction: column;
@@ -125,6 +124,6 @@ p:nth-child(2) {
   }
 
   img {
-    max-height: 27rem;
+    max-height: 220px;
   }
 }

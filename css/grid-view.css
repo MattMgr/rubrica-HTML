@@ -2,19 +2,19 @@
 @import "/css/--variables.css";
 
 .container {
-  margin: 0 2.4rem;
+  margin: var(--space-s);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.4rem;
+  gap: var(--space-s);
 }
 
 .card {
-  padding: 1rem;
+  padding: var(--space-xs);
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
-  gap: 2.4rem;
-  border-radius: 0.8rem;
+  gap: var(--space-m);
+  border-radius: var(--space-2xs);
   transition: 0.3s;
 
   position: relative;
@@ -29,8 +29,8 @@
 
 .card:hover .link {
   background-color: var(--primary-color-tint);
-  width: 8rem;
-  height: 8rem;
+  width: var(--space-2xl);
+  height: var(--space-2xl);
   border-radius: 50%;
 }
 
@@ -42,8 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8rem;
-  height: 8rem;
+  width: var(--space-2xl);
+  height: var(--space-2xl);
   border-radius: 50%;
 
   background-image: url("../img/contacts/jim.jpg");
@@ -51,14 +51,14 @@
 }
 
 .number-id {
-  font-size: 5rem;
+  font-size: var(--font-size-4);
   font-weight: 700;
   text-decoration: none;
   font-family: var(--lobster);
-  color: var(--title-color);
+  color: var(--primary-text-color);
   position: absolute;
   top: 30px;
-  left: 40px;
+  left: 42px;
 
   display: none;
 }
@@ -66,10 +66,10 @@
 .full-name {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-2xs);
 
-  font-size: 2.5rem;
-  color: var(--title-color);
+  font-size: var(--font-size-3);
+  color: var(--primary-text-color);
 }
 
 .surname {
@@ -124,18 +124,14 @@
 
 @media (max-width: 900px) {
   .container {
-    margin: 0 2.4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.4rem;
   }
 }
 
 @media (max-width: 600px) {
   .container {
-    margin: 0 2.4rem;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.4rem;
   }
 }

@@ -3,7 +3,7 @@
 
 .container {
   border: 3px solid var(--primary-color-light);
-  border-radius: 0.8rem;
+  border-radius: var(--space-2xs);
   overflow: hidden;
 }
 
@@ -11,17 +11,17 @@
 .row {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr;
+  color: var(--text-color);
 }
 
 .row--head {
-  font-size: var(--big);
+  font-size: var(--font-size-1);
   font-weight: 700;
 }
 
 .link:link,
 .link:visited {
   text-decoration: none;
-  color: var(--text-color);
 }
 
 .row {
@@ -30,7 +30,7 @@
 
 .row:hover {
   background-color: var(--secondary-color);
-  padding: 0.3rem 0;
+  padding: var(--space-2xs) 0;
 }
 
 .odd {
@@ -38,12 +38,12 @@
 }
 
 .cell-id {
-  margin: 1.2rem 1.6rem;
+  margin: var(--space-xs);
   font-weight: 700;
 }
 
 .id {
-  background-color: var(--title-color);
+  background-color: var(--bg-color);
 }
 
 span {
@@ -53,14 +53,13 @@ span {
 }
 
 .cell {
-  margin: 1.2rem 0;
-  margin-right: 4rem;
-  min-height: 1.4rem;
-  max-height: fit-content;
+  margin: var(--space-xs);
+  margin-right: var(--space-l);
+  min-height: var(--space-s);
 }
 
 .cell.long-text {
-  max-width: 7rem;
+  width: calc(var(--space-2xl) * 1.5);
   overflow: hidden;
 }
 
