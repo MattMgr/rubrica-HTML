@@ -5,6 +5,7 @@
   border: 3px solid var(--primary-color-light);
   border-radius: var(--space-2xs);
   overflow: hidden;
+  margin: 0 var(--space-m);
 }
 
 .row--head,
