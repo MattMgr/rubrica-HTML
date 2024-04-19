@@ -3,7 +3,7 @@ const table = document.querySelector(".table-container");
 const grid = document.querySelector(".grid-container");
 
 toggleView.addEventListener("change", function () {
-  if (table.classList.contains("show") && grid.classList.contains("hide")) {
+  if (grid.classList.contains("hide") && table.classList.contains("show")) {
     grid.classList.replace("hide", "show");
     table.classList.replace("show", "hide");
     sessionStorage.setItem("view", "grid");
