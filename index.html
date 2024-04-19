@@ -24,24 +24,14 @@
           <a class="head-link" href="/index.html">Rubrica CSS</a>
         </h1>
       </div>
-      <ul class="menu">
-        <li class="menu-item">
-          <ion-icon class="menu-icon" name="grid-outline"></ion-icon
-          ><a href="/grid-view.html">Grid</a>
-        </li>
-        <li class="menu-item">
-          <ion-icon class="menu-icon" name="tablet-portrait-outline"></ion-icon
-          ><a href="/index.html">Table</a>
-        </li>
-      </ul>
     </header>
 
     <label class="changeTheme">
-      <input type="checkbox" name="changeTheme" />
+      <input id="toggle-view" type="checkbox" name="changeTheme" />
     </label>
 
     <main>
-      <div class="container">
+      <div class="table-container">
         <div class="row--head">
           <div class="cell-id"><span class="id">ID</span></div>
           <div class="cell">Nome</div>
@@ -120,8 +110,115 @@
           </div>
         </a>
       </div>
+
+      <div class="grid-container">
+        <div class="card-grid">
+          <div class="card">
+            <div class="img jim">
+              <div class="link">
+                <a href="" class="number-id" href="/contacts/1-jim.html">1</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Jim</div>
+              <div class="surname">Halpert</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img pam">
+              <div class="link">
+                <a class="number-id" href="/contacts/2-pam.html">2</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Pam</div>
+              <div class="surname">Beesly</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img dwight">
+              <div class="link">
+                <a class="number-id" href="/contacts/3-dwight.html">3</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Dwight</div>
+              <div class="surname">Shrute</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img michael">
+              <div class="link">
+                <a class="number-id" href="/contacts/4-michael.html">4</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Michael</div>
+              <div class="surname">Scott</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img creed">
+              <div class="link">
+                <a class="number-id" href="/contacts/5-creed.html">5</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Creed</div>
+              <div class="surname">Bratton</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img andy">
+              <div class="link">
+                <a class="number-id" href="/contacts/6-andy.html">6</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Andy</div>
+              <div class="surname">Bernard</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img stanley">
+              <div class="link">
+                <a class="number-id" href="/contacts/7-stanley.html">7</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Stanley</div>
+              <div class="surname">Hudson</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="img kevin">
+              <div class="link">
+                <a class="number-id" href="/contacts/8-kevin.html">8</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Kevin</div>
+              <div class="surname">Malone</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="img oscar">
+              <div class="link">
+                <a class="number-id" href="/contacts/9-oscar.html">9</a>
+              </div>
+            </div>
+            <div class="full-name">
+              <div class="name">Oscar</div>
+              <div class="surname">Martinez</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
+    <script src="/index.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

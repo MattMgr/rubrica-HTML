@@ -1,7 +1,7 @@
 @import "general.css";
 @import "/css/--variables.css";
 
-.container {
+.table-container {
   border: 3px solid var(--primary-color-light);
   border-radius: var(--space-2xs);
   overflow: hidden;
@@ -54,13 +54,13 @@ span {
 }
 
 .cell {
-  margin: var(--space-xs);
+  margin-top: var(--space-xs);
   margin-right: var(--space-l);
   min-height: var(--space-s);
 }
 
 .cell.long-text {
-  width: calc(var(--space-2xl) * 1.5);
+  max-width: calc(var(--space-2xl) * 1.5);
   overflow: hidden;
 }
 
@@ -73,4 +73,138 @@ span {
   text-overflow: unset;
   overflow: unset;
   word-wrap: break-word;
+}
+
+.card-grid {
+  margin: var(--space-s);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-s);
+}
+
+.card {
+  padding: var(--space-xs);
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+  border-radius: var(--space-2xs);
+  transition: 0.3s;
+
+  position: relative;
+}
+
+.card:hover {
+  background-color: var(--primary-color-tint);
+  z-index: 5;
+  box-shadow: 1rem 0.8rem 1.8rem 0.3rem var(--shadow-color);
+  transform: translateY(-0.3rem);
+}
+
+.card:hover .link {
+  background-color: var(--primary-color-tint);
+  width: calc(var(--space-2xl) * 1.5);
+  height: calc(var(--space-2xl) * 1.5);
+  border-radius: 50%;
+}
+
+.card:hover .number-id {
+  display: block;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--space-2xl) * 1.5);
+  height: calc(var(--space-2xl) * 1.5);
+  border-radius: 50%;
+
+  background-size: cover;
+}
+
+.number-id {
+  font-size: calc(var(--font-size-4) * 1.3);
+  font-weight: 700;
+  text-decoration: none;
+  font-family: var(--lobster);
+  color: var(--primary-text-color);
+  position: absolute;
+  top: 30px;
+  left: 45px;
+
+  display: none;
+}
+
+.full-name {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+
+  font-size: var(--font-size-3);
+  color: var(--primary-text-color);
+}
+
+.surname {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.jim {
+  background-image: url("../img/contacts/jim.jpg");
+  background-size: cover;
+}
+
+.pam {
+  background-image: url("../img/contacts/pam.jpg");
+  background-size: cover;
+}
+
+.dwight {
+  background-image: url("../img/contacts/dwight.jpg");
+  background-size: cover;
+}
+
+.michael {
+  background-image: url("../img/contacts/michael.jpg");
+  background-size: cover;
+}
+
+.creed {
+  background-image: url("../img/contacts/creed.jpg");
+  background-size: cover;
+}
+
+.andy {
+  background-image: url("../img/contacts/andy.jpg");
+  background-size: cover;
+}
+
+.stanley {
+  background-image: url("../img/contacts/stanleyy.jpg");
+  background-size: cover;
+}
+
+.kevin {
+  background-image: url("../img/contacts/kevin.jpg");
+  background-size: cover;
+}
+
+.oscar {
+  background-image: url("../img/contacts/oscar.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

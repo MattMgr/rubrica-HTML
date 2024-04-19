@@ -82,32 +82,6 @@ header {
   color: var(--primary-text-color);
 }
 
-.menu {
-  margin-left: var(--space-s);
-  margin-top: var(--space-none);
-  margin-bottom: var(--space-none);
-}
-
-.menu-item {
-  list-style: none;
-  font-size: var(--font-size-1);
-}
-
-.menu-icon {
-  color: var(--primary-text-color);
-  font-size: var(--font-size-1);
-  margin-right: var(--space-2xs);
-}
-
-.menu-item a {
-  color: var(--primary-text-color);
-  text-decoration: none;
-}
-
-.menu-item a:hover {
-  color: var(--transparent);
-}
-
 main {
   display: flex;
   justify-content: center;
@@ -150,8 +124,17 @@ main {
   left: 58%;
 }
 
-body:has(input:checked) {
+.show {
+  display: block;
 }
+
+.hide {
+  display: none;
+}
+
+/*body:has(input:checked) .card-container {
+  display: none;
+}*/
 
 @media (max-width: 380px) {
   .header {
@@ -161,11 +144,6 @@ body:has(input:checked) {
   }
 
   .title {
-    margin-inline: auto;
-  }
-
-  .menu {
-    display: flex;
     margin-inline: auto;
   }
 }
