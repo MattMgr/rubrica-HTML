@@ -1,5 +1,4 @@
 @import "general.css";
-@import "/css/--variables.css";
 
 .table-container {
   border: 3px solid var(--primary-color-light);
@@ -49,7 +48,7 @@
 
 span {
   background-color: var(--secondary-color);
-  padding: 0.2rem 0.6rem;
+  padding: calc(var(--space-2xs) * 0.5) var(--space-2xs);
   border-radius: 50%;
 }
 
@@ -60,7 +59,7 @@ span {
 }
 
 .cell.long-text {
-  max-width: calc(var(--space-2xl) * 1.5);
+  max-width: calc(var(--space-2xl) * 2);
   overflow: hidden;
 }
 
@@ -97,8 +96,9 @@ span {
 .card:hover {
   background-color: var(--primary-color-tint);
   z-index: 5;
-  box-shadow: 1rem 0.8rem 1.8rem 0.3rem var(--shadow-color);
-  transform: translateY(-0.3rem);
+  box-shadow: var(--space-xs) var(--space-2xs) var(--space-m)
+    calc(var(--space-2xs) * 0.5) var(--shadow-color);
+  transform: translateY(calc(var(--space-2xs) * -1));
 }
 
 .card:hover .link {
@@ -127,7 +127,7 @@ span {
   font-size: calc(var(--font-size-4) * 1.3);
   font-weight: 700;
   text-decoration: none;
-  font-family: var(--lobster);
+  font-family: var(--font-family-title);
   color: var(--primary-text-color);
   position: absolute;
   top: 30px;
@@ -199,6 +199,10 @@ span {
   .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cell.long-text {
+    max-width: calc(var(--space-2xl) * 1.5);
   }
 }
 

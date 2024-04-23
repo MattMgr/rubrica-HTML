@@ -2,46 +2,46 @@
   /**** COLORS ****/
   --bg-color: #fff;
   --text-color: #000;
-  --bio-text-color: #374c91;
 
   --primary-text-color: #fff;
   --primary-color: #374c91;
   --primary-color-tint: #374c91a4;
   --primary-color-light: #d0e6fb86;
 
-  --secondary-color: #ffff00;
-  --checked-toggle-color: #4cb774;
+  --secondary-color: #ffd000;
 
   --shadow-color: #00000048;
   --transparent: #cbcbcbb7;
 
   /**** FONT FAMILY ****/
   --roboto: "Roboto", sans-serif;
-  --lobster: "Lobster";
+  --lobster: "Lobster", serif;
+
+  --font-family-title: var(--lobster);
+  --font-family-text: var(--roboto);
 
   /**** FONT SIZE ****/
   --font-size-0: clamp(1.475rem, 1.3315rem + 0.2174vi, 1.6rem);
-  --font-size-1: clamp(1.65rem, 1.5717rem + 0.3913vi, 1.875rem);
-  --font-size-2: clamp(1.98rem, 1.8535rem + 0.6326vi, 2.3438rem);
-  --font-size-3: clamp(2.376rem, 2.1834rem + 0.9629vi, 2.9297rem);
+  --font-size-1: clamp(1.28rem, 1.5717rem + 0.2913vi, 1.975rem);
+  --font-size-2: clamp(1.78rem, 1.8535rem + 0.326vi, 2.3438rem);
+  --font-size-3: clamp(1.95rem, 2.1834rem + 0.9629vi, 2.9297rem);
   --font-size-4: clamp(3.4214rem, 3.0193rem + 2.0108vi, 4.5776rem);
 
   /**** SPACING ****/
   --space-2xs: clamp(0.75rem, 0.6848rem + 0.3261vi, 0.9375rem);
   --space-xs: clamp(1.125rem, 1.0163rem + 0.5435vi, 1.4375rem);
-  --space-s: clamp(1.5rem, 1.3696rem + 0.6522vi, 1.875rem);
+  --space-s: clamp(1.5rem, 1.3696rem + 0.522vi, 1.875rem);
   --space-none: 0px;
   --space-m: clamp(2.25rem, 2.0543rem + 0.9783vi, 2.8125rem);
   --space-l: clamp(3rem, 2.7391rem + 1.3043vi, 3.75rem);
   --space-xl: clamp(4.5rem, 4.1087rem + 3.3261vi, 5.625rem);
-  --space-2xl: clamp(4.8rem, 4.5087rem + 2.9565vi, 6rem);
+  --space-2xl: clamp(4.8rem, 4.5087rem + 2.8565vi, 6rem);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #000;
     --text-color: #fff;
-    --bio-text-color: #a55301;
 
     --primary-text-color: #000;
     --primary-color: #a55301;

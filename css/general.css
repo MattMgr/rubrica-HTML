@@ -1,5 +1,4 @@
 @import "/css/--variables.css";
-@import "/index.html";
 @import "/css/normalize.css";
 
 h1,
@@ -7,28 +6,62 @@ h2,
 h3,
 h4,
 h5,
-h5,
 h6 {
-  font-family: var(--lobster);
-  margin: 0.8rem 0rem;
+  font-family: var(--font-family-title);
 }
 
-a {
-  background-color: transparent;
+h1 {
+  margin: calc(var(--space-m)) 0;
+}
+
+h2 {
+  margin: calc(var(--space-m)) 0;
+}
+
+h3 {
+  margin: calc(var(--space-m) * 0.8) 0;
+}
+
+h4 {
+  margin: calc(var(--space-m) * 0.5) 0;
+}
+
+h5 {
+  margin: calc(var(--space-s)) 0;
+}
+
+h6 {
+  margin: calc(var(--space-s) * 0.8) 0;
+}
+
+a,
+a:visited {
   text-decoration: underline;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--transparent);
+  cursor: pointer;
+}
+
+blockquote {
+  margin: var(--space-m);
+  color: var(--transparent);
 }
 
 p {
-  margin: 1rem 0rem;
+  margin: var(--space-xs) var(--space-none);
 }
 
 ul,
 ol {
-  margin: 1.5rem 0;
+  margin: var(--space-s) var(--space-none);
+  color: var(--text-color);
 }
 
 li {
-  margin: 0.8rem 3rem;
+  margin: var(--space-2xs) var(--space-l);
 }
 
 * {
@@ -42,10 +75,11 @@ html {
 }
 
 body {
-  font-family: var(--roboto);
+  font-family: var(--font-family-text);
   line-height: 1;
   font-weight: 400;
   background-color: var(--bg-color);
+  color: var(--text-color);
   font-size: var(--font-size-1);
 }
 
@@ -54,14 +88,14 @@ header {
 }
 
 .title {
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-2);
   display: flex;
   align-items: center;
 }
 
 .header {
   background-color: var(--primary-color);
-  font-family: var(--lobster);
+  font-family: var(--font-family-title);
   font-weight: 500;
   padding: var(--space-s);
   display: flex;
@@ -87,41 +121,40 @@ main {
   justify-content: center;
 }
 
-.changeTheme {
+.changeView {
   margin: 0 auto;
-  margin-bottom: 2rem;
-  width: 6rem;
-  height: 3rem;
+  margin-bottom: var(--space-m);
+  width: var(--space-2xl);
+  height: var(--space-m);
   display: block;
   background-color: grey;
-  border-radius: 2rem;
+  border-radius: var(--space-m);
   position: relative;
   transition: all 0.3s;
 }
 
-.changeTheme::before {
+.changeView::before {
   position: absolute;
   left: 5px;
   top: 5px;
-  width: 2rem;
-  height: 2rem;
+  width: var(--space-s);
+  height: var(--space-s);
   background-color: var(--bg-color);
   content: "";
   border-radius: 50%;
   transition: all 0.3s;
-  box-shadow: 0 5px 10px var(--transparent);
 }
 
-.changeTheme input {
+.changeView input {
   display: none;
 }
 
-.changeTheme:has(input:checked) {
-  background-color: var(--checked-toggle-color);
+.changeView:has(input:checked) {
+  background-color: var(--secondary-color);
 }
 
-.changeTheme:has(input:checked)::before {
-  left: 58%;
+.changeView:has(input:checked)::before {
+  transform: translateX(calc(var(--space-m) * 1.1));
 }
 
 .show {
@@ -132,15 +165,10 @@ main {
   display: none;
 }
 
-/*body:has(input:checked) .card-container {
-  display: none;
-}*/
-
 @media (max-width: 380px) {
   .header {
     display: flex;
     flex-direction: column;
-    min-width: 30rem;
   }
 
   .title {
