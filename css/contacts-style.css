@@ -97,7 +97,7 @@ img {
   background-color: var(--bg-color);
   padding: var(--space-s);
   border-radius: calc(var(--space-2xs) * 0.5);
-  border: 0.1rem solid var(--text-color);
+  border: calc(var(--space-2xs) * 0.2) solid var(--text-color);
 }
 
 p {
@@ -110,7 +110,7 @@ p:nth-child(2) {
 }
 
 .bio-container-typography {
-  height: 25rem;
+  height: calc(var(--space-2xl) * 4);
   overflow: scroll;
   color: var(--text-color);
 }
