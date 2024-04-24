@@ -5,7 +5,7 @@ article {
   grid-template-columns: 0.5fr 1.5fr;
   background-color: var(--primary-color);
   color: var(--primary-text-color);
-  width: 800px;
+  width: calc(var(--space-2xl) * 15);
   padding: var(--space-s);
   border-radius: var(--space-s);
   margin: 0 var(--space-m);
@@ -121,7 +121,7 @@ p:nth-child(2) {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .contacts-hobbies {
     display: flex;
     flex-direction: column;
@@ -131,7 +131,7 @@ p:nth-child(2) {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   article {
     display: flex;
     flex-direction: column;
