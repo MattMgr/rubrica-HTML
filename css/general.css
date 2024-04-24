@@ -118,68 +118,56 @@ main {
   display: flex;
   justify-content: center;
 }
-/*
-.toggle-view-container {
-  margin-bottom: var(--space-m);
-  display: flex;
-  justify-content: center;
-}
 
 .changeView {
-  width: calc(var(--space-2xl) * 2);
-  height: var(--space-xl);
-  position: relative;
-  display: block;
-  border-radius: var(--space-m);
-  box-shadow: inset var(--space-none) calc(var(--space-2xs) * 0.1)
-      var(--space-xs) var(--transparent),
-    inset var(--space-none) calc(var(--space-2xs) * -0.1) var(--space-xs)
-      var(--transparent);
-  cursor: pointer;
-}
-
-label:after {
-  background: var(--primary-color-light);
-  content: "";
-  width: var(--space-l);
+  margin: 0 auto;
+  margin-bottom: var(--space-s);
+  width: calc(var(--space-2xl) * 1.5);
   height: var(--space-l);
-  position: absolute;
-  top: calc(var(--space-2xs));
-  left: calc(var(--space-xs) / 1.5);
-  border-radius: 50%;
-  box-shadow: var(--space-none) calc(var(--space-2xs) * 0.1) var(--space-2xs)
-    var(--shadow-color);
+  display: block;
+  background-color: var(--transparent);
+  border-radius: var(--space-m);
+  position: relative;
+  transition: all 0.3s;
 }
 
-#toggle-view {
+.changeView::before {
+  position: absolute;
+  left: calc(var(--space-2xs) * 0.5);
+  top: calc(var(--space-2xs) * 0.5);
+  width: var(--space-m);
+  height: var(--space-m);
+  background-color: var(--bg-color);
+  content: "";
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.changeView input {
   display: none;
 }
 
-#toggle-view:checked + label:after {
-  left: calc(var(--space-2xl) * 1.2);
-  background: var(--secondary-color);
+.changeView:has(input:checked) {
+  background-color: var(--secondary-color);
 }
 
-label,
-label:after {
-  transition: 0.3s all;
+.changeView:has(input:checked)::before {
+  left: calc(var(--space-xl));
 }
 
 label ion-icon {
+  font-size: var(--font-size-0);
   position: absolute;
-  top: var(--space-s);
-  z-index: 100;
+  top: calc(var(--space-2xs) * 1.11);
+  transition: 0.3s;
 }
-*/
 
 .tableIcon {
-  left: calc(var(--space-s) * 0.95);
-  transition: 0.3s;
+  left: calc(var(--space-2xs) * 1.11);
 }
 
 .gridIcon {
-  left: calc(var(--space-2xl) * 1.35);
-  transition: 0.3s;
+  left: calc(var(--space-xl) * 1.11);
 }
 
 .show {
