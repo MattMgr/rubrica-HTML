@@ -37,7 +37,6 @@ h6 {
 a,
 a:visited {
   text-decoration: underline;
-  color: var(--text-color);
 }
 
 a:hover {
@@ -57,7 +56,6 @@ p {
 ul,
 ol {
   margin: var(--space-s) var(--space-none);
-  color: var(--text-color);
 }
 
 li {
@@ -97,7 +95,7 @@ header {
   background-color: var(--primary-color);
   font-family: var(--font-family-title);
   font-weight: 500;
-  padding: var(--space-s);
+  padding: var(--space-xs);
   display: flex;
   justify-content: center;
 }
@@ -121,40 +119,66 @@ main {
   justify-content: center;
 }
 
-.changeView {
-  margin: 0 auto;
+.toggle-view-container {
   margin-bottom: var(--space-m);
-  width: var(--space-2xl);
-  height: var(--space-m);
-  display: block;
-  background-color: grey;
-  border-radius: var(--space-m);
+  display: flex;
+  justify-content: center;
+}
+
+.changeView {
+  width: calc(var(--space-2xl) * 2);
+  height: var(--space-xl);
   position: relative;
-  transition: all 0.3s;
+  display: block;
+  border-radius: var(--space-m);
+  box-shadow: inset var(--space-none) calc(var(--space-2xs) * 0.1)
+      var(--space-xs) var(--transparent),
+    inset var(--space-none) calc(var(--space-2xs) * -0.1) var(--space-xs)
+      var(--transparent);
+  cursor: pointer;
 }
 
-.changeView::before {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: var(--space-s);
-  height: var(--space-s);
-  background-color: var(--bg-color);
+label:after {
+  background: var(--primary-color-light);
   content: "";
+  width: var(--space-l);
+  height: var(--space-l);
+  position: absolute;
+  top: calc(var(--space-2xs));
+  left: calc(var(--space-xs) / 1.5);
   border-radius: 50%;
-  transition: all 0.3s;
+  box-shadow: var(--space-none) calc(var(--space-2xs) * 0.1) var(--space-2xs)
+    var(--shadow-color);
 }
 
-.changeView input {
+#toggle-view {
   display: none;
 }
 
-.changeView:has(input:checked) {
-  background-color: var(--secondary-color);
+#toggle-view:checked + label:after {
+  left: calc(var(--space-2xl) * 1.2);
+  background: var(--secondary-color);
 }
 
-.changeView:has(input:checked)::before {
-  transform: translateX(calc(var(--space-m) * 1.1));
+label,
+label:after {
+  transition: 0.3s all;
+}
+
+label ion-icon {
+  position: absolute;
+  top: var(--space-s);
+  z-index: 100;
+}
+
+.tableIcon {
+  left: calc(var(--space-s) * 0.95);
+  transition: 0.3s;
+}
+
+.gridIcon {
+  left: calc(var(--space-2xl) * 1.35);
+  transition: 0.3s;
 }
 
 .show {

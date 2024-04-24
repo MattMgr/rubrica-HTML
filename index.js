@@ -1,6 +1,8 @@
 const toggleView = document.getElementById("toggle-view");
 const table = document.querySelector(".table-container");
 const grid = document.querySelector(".grid-container");
+const tableIcon = document.querySelector(".table");
+const gridIcon = document.querySelector(".grid");
 
 toggleView.addEventListener("change", function () {
   if (grid.classList.contains("hide") && table.classList.contains("show")) {
