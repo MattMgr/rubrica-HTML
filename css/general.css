@@ -118,7 +118,7 @@ main {
   display: flex;
   justify-content: center;
 }
-
+/*
 .toggle-view-container {
   margin-bottom: var(--space-m);
   display: flex;
@@ -170,6 +170,7 @@ label ion-icon {
   top: var(--space-s);
   z-index: 100;
 }
+*/
 
 .tableIcon {
   left: calc(var(--space-s) * 0.95);
