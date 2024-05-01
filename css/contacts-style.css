@@ -1,12 +1,11 @@
 @import "general.css";
-@import "/css/--variables.css";
 
 article {
   display: grid;
   grid-template-columns: 0.5fr 1.5fr;
   background-color: var(--primary-color);
   color: var(--primary-text-color);
-  width: 800px;
+  width: calc(var(--space-2xl) * 15);
   padding: var(--space-s);
   border-radius: var(--space-s);
   margin: 0 var(--space-m);
@@ -22,7 +21,7 @@ img {
 }
 
 .name {
-  font-family: var(--lobster);
+  font-family: var(--font-family-title);
   font-weight: 200;
   margin-bottom: var(--space-s);
   grid-column: 1 / -1;
@@ -41,19 +40,21 @@ img {
 }
 
 .heading {
-  font-family: var(--lobster);
+  font-family: var(--font-family-title);
   margin-top: var(--space-none);
   margin-bottom: calc(var(--space-xs) * 0.1);
   font-weight: 200;
 }
 
 .contact {
+  color: var(--primary-text-color);
   display: flex;
   justify-content: flex-start;
   background-color: var(--primary-color-light);
   padding: var(--space-xs);
   border-radius: var(--space-2xs);
   margin: var(--space-none);
+  font-size: var(--font-size-1);
 }
 
 .contact-link:link,
@@ -86,15 +87,17 @@ img {
   flex-direction: column;
   gap: var(--space-2xs);
   margin-bottom: var(--space-s);
+  color: var(--primary-text-color);
 }
 
-.bio-container {
+.bio-container,
+.bio-container-typography {
   grid-column: 1 / -1;
   color: var(--primary-color);
   background-color: var(--bg-color);
-  padding: 1.2rem;
-  border-radius: 0.3rem;
-  border: 0.1rem solid var(--text-color);
+  padding: var(--space-s);
+  border-radius: calc(var(--space-2xs) * 0.5);
+  border: calc(var(--space-2xs) * 0.2) solid var(--text-color);
 }
 
 p {
@@ -106,7 +109,19 @@ p:nth-child(2) {
   margin-bottom: var(--space-xs);
 }
 
-@media (max-width: 700px) {
+.bio-container-typography {
+  height: calc(var(--space-2xl) * 4);
+  overflow: scroll;
+  color: var(--text-color);
+}
+
+@media (max-width: 800px) {
+  article {
+    margin: 0 var(--space-l);
+  }
+}
+
+@media (max-width: 750px) {
   .contacts-hobbies {
     display: flex;
     flex-direction: column;
@@ -116,7 +131,7 @@ p:nth-child(2) {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   article {
     display: flex;
     flex-direction: column;
