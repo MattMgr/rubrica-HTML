@@ -1,5 +1,113 @@
 @import "general.css";
 
+.forms {
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--space-2xl) * 1.5);
+  margin: var(--space-l) 0;
+}
+
+.form-title {
+  font-size: var(--font-size-2);
+  margin: 0;
+  margin-bottom: var(--space-xs);
+}
+
+.forms input,
+button {
+  padding: calc(var(--space-2xs) * 0.5);
+  font-size: var(--font-size-0);
+}
+
+.input-icon {
+  position: relative;
+  margin-right: var(--space-2xs);
+}
+
+.clear-form-icon {
+  font-size: var(--font-size-1);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.clear-form-icon:hover {
+  transition: all 0.3s;
+  color: var(--primary-color-tint);
+  cursor: pointer;
+}
+
+.forms button {
+  font-family: var(--font-family-text);
+  padding: calc(var(--space-2xs) * 0.5) var(--space-s);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: var(--space-2xs);
+}
+
+.forms button:hover {
+  background-color: var(--primary-color-tint);
+  color: var(--primary-text-color);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#post-form {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.changeView {
+  margin: 0 auto;
+  margin-bottom: var(--space-s);
+  width: calc(var(--space-2xl) * 1.5);
+  height: var(--space-l);
+  display: block;
+  background-color: var(--transparent);
+  border-radius: var(--space-m);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.changeView::before {
+  position: absolute;
+  left: calc(var(--space-2xs) * 0.5);
+  top: calc(var(--space-2xs) * 0.5);
+  width: var(--space-m);
+  height: var(--space-m);
+  background-color: var(--bg-color);
+  content: "";
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.changeView input {
+  display: none;
+}
+
+.changeView:has(input:checked) {
+  background-color: var(--secondary-color);
+}
+
+.changeView:has(input:checked)::before {
+  left: calc(var(--space-xl));
+}
+
+label ion-icon {
+  font-size: var(--font-size-0);
+  position: absolute;
+  top: calc(var(--space-2xs) * 1.1);
+  transition: 0.3s;
+}
+
+.tableIcon {
+  left: calc(var(--space-2xs) * 1.1);
+}
+
+.gridIcon {
+  left: calc(var(--space-xl) * 1.1);
+}
+
 .table-container {
   border: calc(var(--space-2xs) * 0.5) solid var(--primary-color-light);
   border-radius: var(--space-2xs);
@@ -142,57 +250,6 @@ span {
 
   font-size: var(--font-size-3);
   color: var(--primary-text-color);
-}
-
-.changeView {
-  margin: 0 auto;
-  margin-bottom: var(--space-s);
-  width: calc(var(--space-2xl) * 1.5);
-  height: var(--space-l);
-  display: block;
-  background-color: var(--transparent);
-  border-radius: var(--space-m);
-  position: relative;
-  transition: all 0.3s;
-}
-
-.changeView::before {
-  position: absolute;
-  left: calc(var(--space-2xs) * 0.5);
-  top: calc(var(--space-2xs) * 0.5);
-  width: var(--space-m);
-  height: var(--space-m);
-  background-color: var(--bg-color);
-  content: "";
-  border-radius: 50%;
-  transition: all 0.3s;
-}
-
-.changeView input {
-  display: none;
-}
-
-.changeView:has(input:checked) {
-  background-color: var(--secondary-color);
-}
-
-.changeView:has(input:checked)::before {
-  left: calc(var(--space-xl));
-}
-
-label ion-icon {
-  font-size: var(--font-size-0);
-  position: absolute;
-  top: calc(var(--space-2xs) * 1.1);
-  transition: 0.3s;
-}
-
-.tableIcon {
-  left: calc(var(--space-2xs) * 1.1);
-}
-
-.gridIcon {
-  left: calc(var(--space-xl) * 1.1);
 }
 
 .surname {
