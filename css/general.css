@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-  margin: calc(var(--space-m) * 0.8) 0;
+  margin: calc(var(--space-m) * 0.6) 0;
 }
 
 h4 {
@@ -27,11 +27,11 @@ h4 {
 }
 
 h5 {
-  margin: calc(var(--space-s)) 0;
+  margin: calc(var(--space-s) * 0.8) 0;
 }
 
 h6 {
-  margin: calc(var(--space-s) * 0.8) 0;
+  margin: calc(var(--space-s) * 0.6) 0;
 }
 
 a,

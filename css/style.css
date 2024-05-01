@@ -183,16 +183,16 @@ span {
 label ion-icon {
   font-size: var(--font-size-0);
   position: absolute;
-  top: calc(var(--space-2xs) * 1.11);
+  top: calc(var(--space-2xs) * 1.1);
   transition: 0.3s;
 }
 
 .tableIcon {
-  left: calc(var(--space-2xs) * 1.11);
+  left: calc(var(--space-2xs) * 1.1);
 }
 
 .gridIcon {
-  left: calc(var(--space-xl) * 1.11);
+  left: calc(var(--space-xl) * 1.1);
 }
 
 .surname {
