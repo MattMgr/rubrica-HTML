@@ -162,7 +162,7 @@ span {
 
 .cell {
   margin-top: var(--space-xs);
-  margin-right: var(--space-l);
+  margin-right: calc(var(--space-2xl) * 1.5);
   min-height: var(--space-s);
 }
 
@@ -306,6 +306,10 @@ span {
   .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cell {
+    margin-right: var(--space-xl);
   }
 
   .cell.long-text {

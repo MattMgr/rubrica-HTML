@@ -51,3 +51,78 @@ if (
   table.classList.add("show");
   grid.classList.add("hide");
 }
+
+// GET DATA FROM JSONS-ERVER
+
+const tableElement = document.querySelector(".table-container");
+const postTemplate = document.getElementById("single-contact");
+const postForm = document.getElementById("post-form");
+
+function sendHttpRequest(method, url, data) {
+  const promise = new Promise((resolve) => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open(method, url);
+
+    xhr.responseType = "json";
+
+    xhr.onload = function () {
+      resolve(xhr.response);
+    };
+
+    xhr.send(JSON.stringify(data));
+  });
+
+  return promise;
+}
+
+async function fetchContacts() {
+  const responseData = await sendHttpRequest(
+    "GET",
+    "http://localhost:3000/contacts"
+  );
+  const listContacts = responseData;
+  viewConstructor(listContacts);
+}
+
+fetchContacts();
+
+function viewConstructor(contacts) {
+  for (const contact of contacts) {
+    contact.id = contacts.indexOf(contact) + 1;
+    const contactEl = document.importNode(postTemplate.content, true);
+    contactEl
+      .querySelector("a")
+      .setAttribute(
+        "href",
+        `/contacts/${contact.id}-${contact.firstname}.html`
+      );
+    contactEl.querySelector("span").textContent = contact.id;
+    contactEl.getElementById("firstname").textContent = contact.firstname;
+    contactEl.getElementById("lastname").textContent = contact.lastname;
+    if (contact.id % 2 != 0) {
+      const rowDiv = contactEl.querySelector("div");
+      rowDiv.classList.add("odd");
+    }
+    tableElement.append(contactEl);
+  }
+}
+
+postForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!event.target.firstname.value || !event.target.lastname.value) {
+    alert("invalid data! Please enter valid data");
+    return;
+  }
+  const contact = {
+    firstname: event.target.firstname.value.replace(
+      event.target.firstname.value[0],
+      event.target.firstname.value[0].toUpperCase()
+    ),
+    lastname: event.target.lastname.value.replace(
+      event.target.lastname.value[0],
+      event.target.lastname.value[0].toUpperCase()
+    ),
+  };
+  sendHttpRequest("POST", "http://localhost:3000/contacts", contact);
+});
