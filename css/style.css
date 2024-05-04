@@ -118,7 +118,7 @@ label ion-icon {
 .row--head,
 .row {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
   color: var(--text-color);
 }
 
@@ -217,6 +217,10 @@ span {
 
 .card:hover .number-id {
   display: block;
+}
+
+#delete-icon:hover {
+  color: red;
 }
 
 .img {

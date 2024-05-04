@@ -1,3 +1,5 @@
+// TOGGLE VIEW
+
 const toggleView = document.getElementById("toggle-view");
 const table = document.querySelector(".table-container");
 const grid = document.querySelector(".grid-container");
@@ -55,25 +57,25 @@ if (
 // GET DATA FROM JSONS-ERVER
 
 const tableElement = document.querySelector(".table-container");
-const postTemplate = document.getElementById("single-contact");
+const contactTemplate = document.getElementById("single-contact");
 const postForm = document.getElementById("post-form");
+const deleteIcon = contactTemplate.content.getElementById("delete-icon");
+let divId;
+console.log(deleteIcon);
 
-function sendHttpRequest(method, url, data) {
-  const promise = new Promise((resolve) => {
-    const xhr = new XMLHttpRequest();
-
-    xhr.open(method, url);
-
-    xhr.responseType = "json";
-
-    xhr.onload = function () {
-      resolve(xhr.response);
-    };
-
-    xhr.send(JSON.stringify(data));
-  });
-
-  return promise;
+async function sendHttpRequest(method, url, data) {
+  try {
+    const response = await fetch(url, {
+      method: method,
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return await response.json();
+  } catch (error) {
+    throw new Error("Oops.. something went wrong!");
+  }
 }
 
 async function fetchContacts() {
@@ -84,24 +86,24 @@ async function fetchContacts() {
   const listContacts = responseData;
   viewConstructor(listContacts);
 }
-
 fetchContacts();
 
 function viewConstructor(contacts) {
   for (const contact of contacts) {
-    contact.id = contacts.indexOf(contact) + 1;
-    const contactEl = document.importNode(postTemplate.content, true);
+    const id = contacts.indexOf(contact) + 1;
+    const contactEl = document.importNode(contactTemplate.content, true);
+    console.log(contactEl);
     contactEl
       .querySelector("a")
-      .setAttribute(
-        "href",
-        `/contacts/${contact.id}-${contact.firstname}.html`
-      );
-    contactEl.querySelector("span").textContent = contact.id;
+      .setAttribute("href", `/contacts/${id}-${contact.firstname}.html`);
+    contactEl.querySelector("span").textContent = id;
     contactEl.getElementById("firstname").textContent = contact.firstname;
     contactEl.getElementById("lastname").textContent = contact.lastname;
-    if (contact.id % 2 != 0) {
-      const rowDiv = contactEl.querySelector("div");
+    divId = contactEl.getElementById("contact");
+    divId.classList.add(contact.id);
+    // console.log(divId.getAttribute("class"));
+    if (id % 2 != 0) {
+      const rowDiv = contactEl.querySelector(".row");
       rowDiv.classList.add("odd");
     }
     tableElement.append(contactEl);
@@ -111,7 +113,7 @@ function viewConstructor(contacts) {
 postForm.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!event.target.firstname.value || !event.target.lastname.value) {
-    alert("invalid data! Please enter valid data");
+    alert("Invalid data! Please enter valid data");
     return;
   }
   const contact = {
@@ -125,4 +127,18 @@ postForm.addEventListener("submit", (event) => {
     ),
   };
   sendHttpRequest("POST", "http://localhost:3000/contacts", contact);
+});
+
+// function deleteContact(){
+
+// sendHttpRequest("DELETE", `http://localhost:3000/contacts/${contactId}`)
+
+// deleteIcon.addEventListener("click", deleteContact)
+
+tableElement.addEventListener("click", (event) => {
+  if (event.target.id === "delete-icon") {
+    const contactId = divId.getAttribute("class");
+    console.log(contactId);
+    sendHttpRequest("DELETE", `http://localhost:3000/contacts/${contactId}`);
+  }
 });
