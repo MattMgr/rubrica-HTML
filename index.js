@@ -16,6 +16,9 @@ async function sendHttpRequest(method, url, data) {
         "Content-Type": "application/json",
       },
     });
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
     return await response.json();
   } catch (error) {
     throw new Error("Oops.. something went wrong!");
