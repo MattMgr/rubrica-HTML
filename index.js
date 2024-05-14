@@ -1,12 +1,11 @@
-// GET DATA FROM JSONS-ERVER
-
 const tableElement = document.querySelector(".table-container");
 const contactTemplate = document.getElementById("single-contact");
 const postForm = document.getElementById("post-form");
-const deleteIcon = contactTemplate.content.getElementById("delete-icon");
+const getForm = document.getElementById("get-form");
 let divId;
-console.log(deleteIcon);
+let id;
 
+// HTTP REQUESTS FUNCTION
 async function sendHttpRequest(method, url, data) {
   try {
     const response = await fetch(url, {
@@ -25,44 +24,50 @@ async function sendHttpRequest(method, url, data) {
   }
 }
 
+// FETCH CONTACTS FUNCTION
 async function fetchContacts() {
   const responseData = await sendHttpRequest(
     "GET",
-    "http://localhost:3000/contacts"
+    "http://localhost:8000/contacts"
   );
-  const listContacts = responseData;
-  viewConstructor(listContacts);
+  const contacts = responseData;
+  for (const contact of contacts) {
+    id = contacts.indexOf(contact) + 1;
+    viewConstructor(contact);
+  }
+  id = contacts.length;
 }
 fetchContacts();
+console.log(tableElement.childNodes);
 
-function viewConstructor(contacts) {
-  for (const contact of contacts) {
-    const id = contacts.indexOf(contact) + 1;
-    const contactEl = document.importNode(contactTemplate.content, true);
-    console.log(contactEl);
-    contactEl
-      .querySelector("a")
-      .setAttribute("href", `/contacts/${id}-${contact.firstname}.html`);
-    contactEl.querySelector("span").textContent = id;
-    contactEl.getElementById("firstname").textContent = contact.firstname;
-    contactEl.getElementById("lastname").textContent = contact.lastname;
-    divId = contactEl.getElementById("contact");
-    divId.classList.add(contact.id);
-    // console.log(divId.getAttribute("class"));
-    if (id % 2 != 0) {
-      const rowDiv = contactEl.querySelector(".row");
-      rowDiv.classList.add("odd");
-    }
-    tableElement.append(contactEl);
+//RUBRICA'S VIEW CONTRUCTOR FUNCTION
+function viewConstructor(contact) {
+  // for (const contact of contacts) {
+  const contactEl = document.importNode(contactTemplate.content, true);
+  contactEl
+    .querySelector("a")
+    .setAttribute("href", `/contacts/${id}-${contact.firstname}.html`);
+  contactEl.querySelector("span").textContent = id;
+  contactEl.getElementById("firstname").textContent = contact.firstname;
+  contactEl.getElementById("lastname").textContent = contact.lastname;
+  divId = contactEl.getElementById("contact");
+  divId.classList.add(contact.id);
+  if (id % 2 != 0) {
+    const rowDiv = contactEl.querySelector(".row");
+    rowDiv.classList.add("odd");
   }
+  tableElement.append(contactEl);
+  //}
 }
 
+//ADD CONTACT LOGIC
 postForm.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!event.target.firstname.value || !event.target.lastname.value) {
     alert("Invalid data! Please enter valid data");
     return;
   }
+  id++;
   const contact = {
     firstname: event.target.firstname.value.replace(
       event.target.firstname.value[0],
@@ -73,15 +78,15 @@ postForm.addEventListener("submit", (event) => {
       event.target.lastname.value[0].toUpperCase()
     ),
   };
-  sendHttpRequest("POST", "http://localhost:3000/contacts", contact);
+  addToDom(contact);
 });
 
-// function deleteContact(){
+function addToDom(el) {
+  sendHttpRequest("POST", "http://localhost:3000/contacts", el);
+  viewConstructor(el);
+}
 
-// sendHttpRequest("DELETE", `http://localhost:3000/contacts/${contactId}`)
-
-// deleteIcon.addEventListener("click", deleteContact)
-
+//DELETE CONTACT FUNCTION
 tableElement.addEventListener("click", (event) => {
   event.stopPropagation();
   if (event.target.id === "delete-icon") {
@@ -91,8 +96,22 @@ tableElement.addEventListener("click", (event) => {
   }
 });
 
-// TOGGLE VIEW
+// FULL TEXT SEARCH
+getForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!event.target.firstname.value) {
+    alert("Invalid data! Please enter valid data");
+    return;
+  }
+  console.log(
+    sendHttpRequest(
+      "GET",
+      `http://localhost:3000/contacts?firstname=${firstname.value}`
+    )
+  );
+});
 
+//TOGGLE VIEW LOGIC
 const toggleView = document.getElementById("toggle-view");
 const table = document.querySelector(".table-container");
 const grid = document.querySelector(".grid-container");
