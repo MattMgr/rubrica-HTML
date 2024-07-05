@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +17,22 @@
     <title>Rubrica</title>
   </head>
   <body>
+    <!-- TEMPLATE -->
+    <template id="single-contact">
+      <div>
+        <div class="link" href="">
+          <div class="row">
+            <div class="cell-id highlight">
+              <a href=""><span></span></a>
+            </div>
+            <div class="cell long-text firstname"></div>
+            <div class="cell long-text lastname"></div>
+            <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </template>
+
     <header class="header">
       <div class="title">
         <h1>
@@ -25,6 +41,31 @@
         </h1>
       </div>
     </header>
+
+    <section class="forms">
+      <div>
+        <h2 class="form-title">Nuova persona</h2>
+        <form action="#" id="post-form">
+          <div class="input-icon">
+            <input id="firstname" type="text" placeholder="Nome" />
+          </div>
+          <div class="input-icon">
+            <input id="lastname" type="text" placeholder="Cognome" />
+          </div>
+          <button id="submit-add-form" type="submit">Aggiungi</button>
+        </form>
+      </div>
+
+      <div>
+        <h2 class="form-title">Cerca</h2>
+        <form action="#" id="get-form">
+          <div class="input-icon">
+            <input id="firstname" type="text" placeholder="Nome/Cognome" />
+          </div>
+          <button id="submit-search-form" type="submit">Cerca</button>
+        </form>
+      </div>
+    </section>
 
     <label class="changeView">
       <input type="checkbox" name="changeTheme" id="toggle-view" />
@@ -40,77 +81,13 @@
           <div class="cell">Cognome</div>
         </div>
 
-        <a class="link" href="/contacts/1-jim.html">
+        <!-- <a class="link" href="/contacts/1-jim.html">
           <div class="row odd">
             <div class="cell-id highlight"><span>1</span></div>
             <div class="cell long-text">Jim</div>
             <div class="cell long-text">Halpert</div>
           </div>
-        </a>
-
-        <a class="link" href="/contacts/2-pam.html">
-          <div class="row">
-            <div class="cell-id highlight"><span>2</span></div>
-            <div class="cell long-text">Pam</div>
-            <div class="cell long-text">Beesly</div>
-          </div>
-        </a>
-
-        <a class="link" href="/contacts/3-dwight.html">
-          <div class="row odd">
-            <div class="cell-id highlight"><span>3</span></div>
-            <div class="cell long-text">Dwight</div>
-            <div class="cell long-text">Shrute</div>
-          </div>
-        </a>
-
-        <a class="link" href="/contacts/4-michael.html">
-          <div class="row">
-            <div class="cell-id highlight"><span>4</span></div>
-            <div class="cell long-text">Michael</div>
-            <div class="cell long-text">Scott</div>
-          </div>
-        </a>
-
-        <a class="link" href="/contacts/5-creed.html">
-          <div class="row odd">
-            <div class="cell-id highlight"><span>5</span></div>
-            <div class="cell long-text">Creed</div>
-            <div class="cell long-text">Bratton</div>
-          </div>
-        </a>
-
-        <a class="link" href="/contacts/6-andy.html">
-          <div class="row">
-            <div class="cell-id highlight"><span>6</span></div>
-            <div class="cell long-text">Andy</div>
-            <div class="cell long-text">Bernard</div>
-          </div>
-        </a>
-
-        <a class="link" href="/contacts/7-stanley.html">
-          <div class="row odd">
-            <div class="cell-id highlight"><span>7</span></div>
-            <div class="cell long-text">Stanley</div>
-            <div class="cell long-text">Hudson</div>
-          </div>
-        </a>
-
-        <a class="link" href="/contacts/8-kevin.html">
-          <div class="row">
-            <div class="cell-id highlight"><span>8</span></div>
-            <div class="cell long-text">Kevinnnnnnnnnnnnnnnnnnnnn</div>
-            <div class="cell long-text">Maloneeeeeeeeeeeeeeeeeeeee</div>
-          </div>
-        </a>
-
-        <a class="link" href="/contacts/9-oscar.html">
-          <div class="row odd">
-            <div class="cell-id highlight"><span>9</span></div>
-            <div class="cell long-text">Oscar</div>
-            <div class="cell long-text">Martinez</div>
-          </div>
-        </a>
+        </a> -->
       </div>
 
       <div class="grid-container">
