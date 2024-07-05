@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,16 +17,19 @@
     <title>Rubrica</title>
   </head>
   <body>
+    <!-- TEMPLATE -->
     <template id="single-contact">
-      <div id="contact">
-        <a class="link" href="">
+      <div>
+        <div class="link" href="">
           <div class="row">
-            <div class="cell-id highlight"><span></span></div>
-            <div id="firstname" class="cell long-text"></div>
-            <div id="lastname" class="cell long-text lastname"></div>
-            <ion-icon id="delete-icon" name="trash-outline"></ion-icon>
+            <div class="cell-id highlight">
+              <a href=""><span></span></a>
+            </div>
+            <div class="cell long-text firstname"></div>
+            <div class="cell long-text lastname"></div>
+            <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
           </div>
-        </a>
+        </div>
       </div>
     </template>
 

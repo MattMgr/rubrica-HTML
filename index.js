@@ -28,7 +28,7 @@ async function sendHttpRequest(method, url, data) {
 async function fetchContacts() {
   const responseData = await sendHttpRequest(
     "GET",
-    "http://localhost:8000/contacts"
+    "http://localhost:4000/contacts"
   );
   const contacts = responseData;
   for (const contact of contacts) {
@@ -42,22 +42,26 @@ console.log(tableElement.childNodes);
 
 //RUBRICA'S VIEW CONTRUCTOR FUNCTION
 function viewConstructor(contact) {
-  // for (const contact of contacts) {
   const contactEl = document.importNode(contactTemplate.content, true);
   contactEl
     .querySelector("a")
     .setAttribute("href", `/contacts/${id}-${contact.firstname}.html`);
   contactEl.querySelector("span").textContent = id;
-  contactEl.getElementById("firstname").textContent = contact.firstname;
-  contactEl.getElementById("lastname").textContent = contact.lastname;
-  divId = contactEl.getElementById("contact");
+  contactEl.querySelector(".firstname").textContent = contact.firstname;
+  contactEl.querySelector(".lastname").textContent = contact.lastname;
+  divId = contactEl.querySelector("div");
   divId.classList.add(contact.id);
+  console.log(divId.classList);
   if (id % 2 != 0) {
     const rowDiv = contactEl.querySelector(".row");
     rowDiv.classList.add("odd");
   }
+  contactEl.querySelector(".delete-icon").addEventListener("click", (event) => {
+    event.stopPropagation();
+    console.log(event.target);
+    deleteContact();
+  });
   tableElement.append(contactEl);
-  //}
 }
 
 //ADD CONTACT LOGIC
@@ -82,19 +86,16 @@ postForm.addEventListener("submit", (event) => {
 });
 
 function addToDom(el) {
-  sendHttpRequest("POST", "http://localhost:3000/contacts", el);
+  sendHttpRequest("POST", "http://localhost:4000/contacts", el);
   viewConstructor(el);
 }
 
 //DELETE CONTACT FUNCTION
-tableElement.addEventListener("click", (event) => {
-  event.stopPropagation();
-  if (event.target.id === "delete-icon") {
-    const contactId = divId.getAttribute("class");
-    console.log(contactId);
-    sendHttpRequest("DELETE", `http://localhost:3000/contacts/${contactId}`);
-  }
-});
+function deleteContact() {
+  const contactId = divId.getAttribute("class");
+  console.log(contactId);
+  sendHttpRequest("DELETE", `http://localhost:4000/contacts/${contactId}`);
+}
 
 // FULL TEXT SEARCH
 getForm.addEventListener("submit", (event) => {
@@ -106,7 +107,7 @@ getForm.addEventListener("submit", (event) => {
   console.log(
     sendHttpRequest(
       "GET",
-      `http://localhost:3000/contacts?firstname=${firstname.value}`
+      `http://localhost:4000/contacts?firstname=${firstname.value}`
     )
   );
 });
